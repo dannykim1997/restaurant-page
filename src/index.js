@@ -1,7 +1,18 @@
-import createHeader from './header';
-import createFooter from './footer';
+import homePage from './home.js';
+import createHeader from './header.js';
+import createFooter from './footer.js';
 import './style.css'; 
 
+const content = document.getElementById('content');
+
+const displayBody = document.createElement('div')
+displayBody.classList.add('display');
+content.appendChild(displayBody);
+
+export default displayBody
+
+
+homePage();
 createHeader();
 createFooter();
 

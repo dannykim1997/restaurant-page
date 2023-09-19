@@ -2,6 +2,7 @@ import './style.css';
 import menuClick from './menu.js';
 import aboutClick from './about.js';
 import contactClick from './contact.js';
+import homeClick from './home.js';
 
 const content = document.getElementById('content');
 
@@ -9,6 +10,11 @@ export default function createHeader() {
     const header = document.createElement('div');
     header.classList.add('header');
     // header.innerHTML = 'This is the header';
+
+    const homeButton = document.createElement('button');
+    homeButton.classList.add('home-button');
+    homeButton.innerHTML = 'Home'
+    homeButton.onclick = homeClick;
 
     const menuButton = document.createElement('button');
     menuButton.classList.add('menu-button');
@@ -26,6 +32,7 @@ export default function createHeader() {
     contactButton.onclick = contactClick;
 
     content.appendChild(header);
+    header.appendChild(homeButton);
     header.appendChild(menuButton);
     header.appendChild(aboutButton);
     header.appendChild(contactButton);
