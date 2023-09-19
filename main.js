@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.getElementById("content");!function(){const t=document.createElement("div");t.classList.add="header",t.innerHTML="This is the header",e.appendChild(t)}(),console.log("hellofafa")})();
