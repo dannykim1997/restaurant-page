@@ -1,5 +1,5 @@
-import exportWorks from "./home";
+import createHeader from './header';
+import './style.css';
 
-exportWorks();
+createHeader();
 
-console.log("hellofafa");
