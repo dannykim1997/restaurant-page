@@ -1,3 +1,13 @@
+import displayBody from "./index.js";
+
 export default function contactClick() {
-    console.log('Contact was clicked!');
+    const contact = document.createElement('div');
+    contact.innerHTML = 
+    `<div>Contact Page<div>`;
+    displayBody.appendChild(contact);
+
+    while(displayBody.hasChildNodes()) {
+        displayBody.removeChild(displayBody.firstChild)
+    };
+    displayBody.appendChild(contact);
 }
