@@ -1,4 +1,3 @@
-// import {homePage} from './home.js';
 import homeClick from './home.js';
 import createHeader from './header.js';
 import createFooter from './footer.js';
@@ -12,7 +11,6 @@ content.appendChild(displayBody);
 
 export default displayBody
 
-// homePage();
 homeClick();
 createHeader();
 createFooter();

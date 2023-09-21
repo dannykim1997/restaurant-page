@@ -1,26 +1,13 @@
 import displayBody from "./index.js";
-
-// const content = document.getElementById('content');
+import './style.css'; 
 
 export default function homeClick() {
     const home = document.createElement('div');
     home.innerHTML = 
-    `<div>Welcome to BBQ Man<div>
-     <div>Our mission is to provide our customers with the most authenthic korean bbq experience that money can buy.
-     <div>`;
+    `<div class='title'>Welcome to K-Pocha<div>
+     <div class='para'>Our mission is to provide our customers with the absolute best korean bar experience that money can buy.<div>`;
+     home.classList.add('home');
     displayBody.appendChild(home);
 
-    while(displayBody.hasChildNodes()) {
-        displayBody.removeChild(displayBody.firstChild)
-    };
-    displayBody.appendChild(home);
+    displayBody.replaceChildren(home);
 }
-
-// export function homePage() {
-//     const welcome = document.createElement('div');
-//     welcome.innerHTML = 
-//     `<div>Welcome to BBQ Man<div>
-//      <div>Our mission is to provide our customers with the most authenthic korean bbq experience that money can buy.
-//      <div>`;
-//     displayBody.appendChild(welcome);
-// }

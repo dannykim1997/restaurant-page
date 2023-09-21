@@ -1,15 +1,19 @@
-import './style.css';
 import menuClick from './menu.js';
 import aboutClick from './about.js';
 import contactClick from './contact.js';
 import homeClick from './home.js';
+import './style.css';
 
 const content = document.getElementById('content');
 
 export default function createHeader() {
     const header = document.createElement('div');
     header.classList.add('header');
-    // header.innerHTML = 'This is the header';
+
+    const headerTitle = document.createElement('div');
+    headerTitle.innerHTML = 'K-Pocha';
+    headerTitle.classList.add('headerTitle');
+    header.appendChild(headerTitle);
 
     const homeButton = document.createElement('button');
     homeButton.classList.add('home-button');

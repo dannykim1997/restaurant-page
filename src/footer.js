@@ -1,3 +1,5 @@
+import './style.css'; 
+
 const content = document.getElementById('content');
 
 export default function createFooter() {
