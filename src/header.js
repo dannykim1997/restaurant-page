@@ -9,6 +9,7 @@ const content = document.getElementById('content');
 export default function createHeader() {
     const header = document.createElement('div');
     header.classList.add('header');
+    content.appendChild(header);
 
     const headerTitle = document.createElement('div');
     headerTitle.innerHTML = 'K-Pocha';
@@ -23,25 +24,23 @@ export default function createHeader() {
     homeButton.classList.add('home-button');
     homeButton.innerHTML = 'Home'
     homeButton.onclick = homeClick;
+    headerButtons.appendChild(homeButton);
 
     const menuButton = document.createElement('button');
     menuButton.classList.add('menu-button');
     menuButton.innerHTML = 'Menu'
     menuButton.onclick = menuClick;
+    headerButtons.appendChild(menuButton);
 
     const aboutButton = document.createElement('button');
     aboutButton.classList.add('about-button');
     aboutButton.innerHTML = 'About'
     aboutButton.onclick = aboutClick;
+    headerButtons.appendChild(aboutButton);
 
     const contactButton = document.createElement('button');
     contactButton.classList.add('contactButton');
     contactButton.innerHTML = 'Contact'
     contactButton.onclick = contactClick;
-
-    content.appendChild(header);
-    headerButtons.appendChild(homeButton);
-    headerButtons.appendChild(menuButton);
-    headerButtons.appendChild(aboutButton);
     headerButtons.appendChild(contactButton);
 }

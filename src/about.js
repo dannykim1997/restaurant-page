@@ -15,9 +15,9 @@ export default function aboutClick() {
         <div>Wonderland CA, 99999<div>
         <div class='subtitle'>Hours<div>
         <div class='para'>Monday-Friday<div> 
-        <div class='para'>10AM-10PM<div>
+        <div class='para'>4PM-1AM<div>
         <div class='para'>Weekends<div>
-        <div class='para'>10AM-12AM<div>
+        <div class='para'>4PM-3AM<div>
      <div>`
     aboutInfo.classList.add('about-info');
     about.appendChild(aboutInfo);
