@@ -15,6 +15,10 @@ export default function createHeader() {
     headerTitle.classList.add('headerTitle');
     header.appendChild(headerTitle);
 
+    const headerButtons = document.createElement('div');
+    headerButtons.classList.add('headerButtons');
+    header.appendChild(headerButtons);
+
     const homeButton = document.createElement('button');
     homeButton.classList.add('home-button');
     homeButton.innerHTML = 'Home'
@@ -36,8 +40,8 @@ export default function createHeader() {
     contactButton.onclick = contactClick;
 
     content.appendChild(header);
-    header.appendChild(homeButton);
-    header.appendChild(menuButton);
-    header.appendChild(aboutButton);
-    header.appendChild(contactButton);
+    headerButtons.appendChild(homeButton);
+    headerButtons.appendChild(menuButton);
+    headerButtons.appendChild(aboutButton);
+    headerButtons.appendChild(contactButton);
 }

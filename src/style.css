@@ -4,7 +4,8 @@ body {
 
 #content {
     display: grid;
-    grid-template-rows: 80px auto 80px;
+    /* grid-template-rows: 80px auto 80px; */
+    grid-template-rows: auto 1fr auto;
     width: 100vw;
     height: 100vh;
 }
@@ -16,11 +17,24 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    height: 80px;
+}
+
+.headerTitle {
+    font-size: 32px;
+}
+
+.headerButtons {
+    display: flex;
+    gap: 10px;
 }
 
 .display {
     background-color: antiquewhite;
     grid-row: 2;
+
+    max-height: fit-content;
+    overflow-y: auto;
 }
 
 .home {
@@ -95,4 +109,5 @@ body {
 .footer {
     border: solid 1px red;
     grid-row: 3;
+    height: 80px;
 }
