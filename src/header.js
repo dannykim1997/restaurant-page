@@ -21,25 +21,25 @@ export default function createHeader() {
     header.appendChild(headerButtons);
 
     const homeButton = document.createElement('button');
-    homeButton.classList.add('home-button');
+    homeButton.classList.add('button');
     homeButton.innerHTML = 'Home'
     homeButton.onclick = homeClick;
     headerButtons.appendChild(homeButton);
 
     const menuButton = document.createElement('button');
-    menuButton.classList.add('menu-button');
+    menuButton.classList.add('button');
     menuButton.innerHTML = 'Menu'
     menuButton.onclick = menuClick;
     headerButtons.appendChild(menuButton);
 
     const aboutButton = document.createElement('button');
-    aboutButton.classList.add('about-button');
+    aboutButton.classList.add('button');
     aboutButton.innerHTML = 'About'
     aboutButton.onclick = aboutClick;
     headerButtons.appendChild(aboutButton);
 
     const contactButton = document.createElement('button');
-    contactButton.classList.add('contactButton');
+    contactButton.classList.add('button');
     contactButton.innerHTML = 'Contact'
     contactButton.onclick = contactClick;
     headerButtons.appendChild(contactButton);

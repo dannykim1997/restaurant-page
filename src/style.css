@@ -2,6 +2,11 @@ body {
     margin: 0;
 }
 
+@font-face {
+    font-family: 'MyFont';
+    src: url('./assets/MerriweatherSans-VariableFont_wght.woff') format('woff');
+}
+
 #content {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -10,29 +15,48 @@ body {
 }
 
 .header {
-    border: solid 1px red;
+    background-color: black;
+    border: solid 4px #FF0000;
     grid-row: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
     height: 80px;
+    font-family: 'MyFont';
+    font-style: italic;
 }
 
 .headerTitle {
     font-size: 32px;
+    color: white;
 }
 
 .headerButtons {
     display: flex;
-    gap: 10px;
+    gap: 50px;
+}
+
+.button {
+    border: none;
+    background: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    margin: 20px;
 }
 
 .display {
-    background-color: antiquewhite;
     grid-row: 2;
     max-height: fit-content;
     overflow-y: auto;
+    background-color: var(--white);
+    background-image: url('./assets/seoul-nightlife-bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .home {
@@ -41,12 +65,28 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
+    color: white;
+    border: solid 1px black;
+    background-color: rgba(255, 0, 0, 0.5);
+    font-family: 'MyFont';
 }
 
-.contact, .menu, .about {
+.menu {
     text-align: center;
+    font-family: 'MyFont';
     font-size: 36px;
     margin: 20px;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.6);
+}
+
+.about, .contact {
+    text-align: center;
+    font-size: 36px;
+    margin: 20px auto;
+    width: 300px;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.6);
 }
 
 .contact-info, .about-info {
@@ -55,11 +95,20 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.about-info {
+    background-color: rgba(255, 0, 0, 0.5)
+}
+
+.contact-info {
+    background-color: rgba(0, 0, 255, 0.5);
 }
 
 .title {
     font-size: 36px;
-    
+    font-family: 'MyFont';
 }
 
 .subtitle {
@@ -77,26 +126,46 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(200px, auto);
-    border: 1px solid black;
 }
 
 .food-container, .drink-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(50px, auto);
-
     align-items: center;
 }
 
 .food-title, .drink-title {
-    font-size: 24px;
+    font-family: 'MyFont';
+    font-style: italic;
+    font-size: 32px;
     text-align: center;
     grid-column: span 2;
     grid-row: 1;
 }
 
-.menu-card {
+.food-menu-card {
     border: 1px solid black;
+    font-size: 24px;
+    min-width: 200px;
+    min-height: 150px;
+    max-height: 150px;
+    margin: 12px;
+    padding: 8px;
+    background-color: rgba(255, 0, 0, 0.5)
+}
+
+.drink-menu-card {
+    border: 1px solid black;
+    min-width: 200px;
+    min-height: 150px;
+    max-height: 150px;
+    margin: 12px;
+    padding: 8px;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+.empty-menu-card {
     min-width: 200px;
     min-height: 150px;
     max-height: 150px;
@@ -106,6 +175,7 @@ body {
 
 .menu-item {
     font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .menu-description {
@@ -114,9 +184,10 @@ body {
 }
 
 .footer {
-    border: solid 1px red;
+    border: solid 4px #0000FF;
     grid-row: 3;
     height: 80px;
+    background-color: black;
 }
 
 .footer-info {
@@ -124,8 +195,66 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 80px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .address, .hours {
     font-size: 18px;
+}
+
+@media only screen and (max-width: 1088px) {
+    .header {
+        margin: 0;
+        padding: 0;
+    }
+
+    .headerTitle {
+        font-size: 24px;
+    }
+    
+    .headerButtons {
+        gap: 10px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+    .para {
+        font-size: 18px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .food-menu-card, .drink-menu-card {
+        min-width: 100px;
+        margin: 12px 0;
+    }
+    .menu-item {
+        font-size: 18px;
+    }
+
+    .menu-description {
+        font-size: 14px;
+    }
+
+    .footer {
+        margin: 0;
+        padding: 0;
+    }
+
+    .address, .hours {
+        font-size: 14px;
+    }
 }

@@ -15,3 +15,4 @@ homeClick();
 createHeader();
 createFooter();
 
+console.log('hi');
