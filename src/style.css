@@ -81,15 +81,16 @@ body {
 }
 
 .about, .contact {
-    text-align: center;
-    font-size: 36px;
-    margin: 20px auto;
-    width: 300px;
-    color: white;
-    background-color: rgba(128, 128, 128, 0.6);
+    /* text-align: center;
+    font-size: 36px; */
+    /* margin: 20px auto; */
+    /* width: 300px; */
+    /* color: white; */
+    /* background-color: rgba(128, 128, 128, 0.6); */
 }
 
 .contact-info, .about-info {
+    color: white;
     text-align: center;
     position: absolute;
     top: 50%;

@@ -3,13 +3,13 @@ import './style.css';
 
 export default function aboutClick() {
     const about = document.createElement('div');
-    about.innerHTML = `<div class='title'>About K-Pocha<div>`;
     about.classList.add('about');
     displayBody.appendChild(about);
 
     const aboutInfo = document.createElement('div');
     aboutInfo.innerHTML = 
     `<div>
+        <div class='title'>About K-Pocha<div>
         <div class='subtitle'>Location<div>
         <div class='para'>1234 Fake Address Place, <div>
         <div>Wonderland CA, 99999<div>

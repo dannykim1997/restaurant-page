@@ -3,13 +3,13 @@ import './style.css';
 
 export default function contactClick() {
     const contact = document.createElement('div');
-    contact.innerHTML = `<div class='title'>Contact Us<div>`;
     contact.classList.add('contact');
     displayBody.appendChild(contact);
 
     const contactInfo = document.createElement('div');
     contactInfo.innerHTML = 
     `<div>
+        <div class='title'>Contact Us<div>
         <div class='subtitle'>Email:<div>
         <div class='para'>k-pocha@gmail.com<div>
         <div class='subtitle'>Phone:<div>
